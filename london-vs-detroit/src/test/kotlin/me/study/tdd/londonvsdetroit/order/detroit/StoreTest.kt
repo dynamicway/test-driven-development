@@ -5,7 +5,7 @@ import me.study.tdd.londonvsdetroit.order.StoreImpl
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-class StoreTest {
+private class StoreTest {
 
     @Test
     fun get_the_stock_of_the_product() {
