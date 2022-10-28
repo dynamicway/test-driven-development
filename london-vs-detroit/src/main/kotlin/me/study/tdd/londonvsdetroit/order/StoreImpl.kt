@@ -8,6 +8,9 @@ class StoreImpl(
     }
 
     override fun decreaseStock(product: Product, stock: Long) {
-        products[product] = getStock(product) - stock
+        val numberOfStockReduction = getStock(product) - stock
+        if (numberOfStockReduction < 0)
+            throw IllegalStateException()
+        products[product] = numberOfStockReduction
     }
 }
